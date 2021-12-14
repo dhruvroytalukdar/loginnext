@@ -40,11 +40,6 @@ export default function useFirebaseAuth() {
     setLoading(false);
   };
 
-  const clear = () => {
-    setLoading(true);
-    setAuthUser(null);
-  };
-
   const signIn = async (email, password) => {
     await signInWithEmailAndPassword(auth, email, password);
   };
@@ -54,7 +49,7 @@ export default function useFirebaseAuth() {
   };
 
   const signMeOut = async () => {
-    await signOut(auth).then(clear);
+    await signOut(auth);
   };
 
   // listen for app state change
