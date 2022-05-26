@@ -73,9 +73,11 @@ export default function register() {
         justify="space-between"
         border="1px"
         borderColor={colorMode == "light" ? "gray.300" : "gray.500"}
-        p={10}
+        p={{ lg: 10 }}
+        px={{ sm: 6 }}
+        py={{ sm: 8 }}
         boxShadow="md"
-        w="30rem"
+        w={{ lg: "30rem", sm: "22rem" }}
         borderRadius="8px"
       >
         {error && (

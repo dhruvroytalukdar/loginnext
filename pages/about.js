@@ -3,7 +3,11 @@ import Head from "next/head";
 
 export default function About() {
   return (
-    <Flex px="10rem" h="90vh" direction="column">
+    <Flex
+      px={{ lg: "10rem", md: "5rem", sm: "1.5rem" }}
+      h="90vh"
+      direction="column"
+    >
       <Head>
         <title>About</title>
       </Head>

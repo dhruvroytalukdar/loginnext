@@ -6,7 +6,6 @@ import {
   Icon,
   Text,
   IconButton,
-  Toast,
   useToast,
   useColorMode,
 } from "@chakra-ui/react";
@@ -23,7 +22,7 @@ export default function Navbar() {
 
   return (
     <Flex
-      px="10rem"
+      px={{ lg: "10rem", md: "5rem", sm: "1.5rem" }}
       h="10vh"
       align="center"
       bg={colorMode == "light" ? "gray.200" : "gray.700"}
@@ -44,7 +43,7 @@ export default function Navbar() {
         <Button
           variant="link"
           aria-label="Sign In"
-          ml="45px"
+          ml={{ lg: "45px", sm: "10px" }}
           colorScheme="black"
           onClick={() => router.push("/about")}
         >
@@ -52,7 +51,7 @@ export default function Navbar() {
         </Button>
         <IconButton
           aria-label="website theme"
-          ml="45px"
+          ml={{ lg: "45px", sm: "10px" }}
           onClick={toggleColorMode}
           icon={colorMode == "light" ? <MoonIcon /> : <SunIcon />}
         />
@@ -61,14 +60,14 @@ export default function Navbar() {
             <Button
               isLoading
               aria-label="Loading"
-              ml="45px"
+              ml={{ lg: "45px", sm: "10px" }}
               colorScheme="teal"
               variant="solid"
             ></Button>
           ) : (
             <IconButton
               aria-label="Sign In"
-              ml="45px"
+              ml={{ lg: "45px", sm: "10px" }}
               onClick={() => router.push("/login")}
               icon={<Icon as={FaUserAlt} />}
             />
@@ -76,7 +75,7 @@ export default function Navbar() {
         ) : (
           <IconButton
             aria-label="Sign In"
-            ml="45px"
+            ml={{ lg: "45px", sm: "10px" }}
             onClick={() => {
               signMeOut();
               toast({

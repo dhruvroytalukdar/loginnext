@@ -13,7 +13,6 @@ import {
   FormLabel,
   Heading,
   Input,
-  toast,
   useColorMode,
   useToast,
 } from "@chakra-ui/react";
@@ -73,11 +72,11 @@ export default function login() {
         borderColor={colorMode == "light" ? "gray.300" : "gray.500"}
         p={10}
         boxShadow="md"
-        w="30rem"
+        w={{ lg: "30rem", sm: "22rem" }}
         borderRadius="8px"
       >
         {error && (
-          <Alert status="error">
+          <Alert mb={10} status="error">
             <AlertIcon />
             <AlertTitle mr={2}>{error}</AlertTitle>
           </Alert>
